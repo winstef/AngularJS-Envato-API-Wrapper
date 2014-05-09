@@ -1,0 +1,250 @@
+<div>
+  <h2>Active Threads (Themeforest)</h2>
+  <div ng-repeat="thread in threads">
+    <div><a href="{{thread.url}}">{{thread.title}}</a></div>
+  </div>
+</div>
+
+<div>
+  <h2>Number of files (Themeforest)</h2>
+  <div ng-repeat="category in categories">
+    <div><a href="{{category.url}}">{{category.category}}</a> : {{category.number_of_files}} files</div>
+  </div>
+</div>
+
+<div>
+  <h2>Forum posts (user: Collis)</h2>
+  <div ng-repeat="post in posts | limitTo:5">
+    <h4>{{post.site}} > {{post.topic_name}} > {{post.thread_subject}}</h4>
+      <p>{{post.content | limitTo:500}} ...</p>      
+      <hr>
+  </div>  
+</div>
+
+<div>
+  <h2>Thread status (id: 14849)</h2>    
+    <div>
+      <a href="{{status.url}}">{{status.title}} <small>({{status.replies}} replies)</small></a>
+      <p>Last reply : {{status.last_reply}} by {{status.last_reply_by}}</p>
+    </div>
+</div>
+
+<div>
+  <h2>Total users</h2>
+Total users : {{users.total_users}}
+</div>
+
+<div>
+  <h2>Item prices (id: 2833226)</h2>    
+    <div ng-repeat="price in prices">
+      <p>Licence : {{price.licence}}</p>
+      <p>Price : ${{price.price}}</p>
+    </div>
+</div>
+
+<div>
+  <h2>User (Collis)</h2>  
+  <div>
+    <span><img ng-src="{{user.image}}" alt="{{user.username}}"></span>
+    <span>Username : {{user.username}}</span>
+  </div>
+  <p>Country : {{user.country}}</p>  
+  <p>Location : {{user.location}}</p> 
+  <p>Sales : {{user.sales}}</p> 
+  <p>Followers : {{user.followers}}</p> 
+</div>
+
+<div>
+  <h2>User items by site (Collis)</h2>    
+    <div ng-repeat="item in userItems">
+      <p>Site : {{item.site}}</p>
+      <p>items : {{item.items}}</p>
+    </div>
+</div>
+
+<div>
+  <h2>Search (Themeforest,wordpress,estate)</h2>    
+    <div ng-repeat="item in results | limitTo:5">
+      <p>ID : {{item.id}}</p>
+      <p>Description : <a href="{{item.url}}">{{item.description}}</a></p>
+      <p>Type: {{item.type}}</p>
+      <p>Sales: {{item.sales}}</p>
+      <p>Rating: {{item.rating}}</p>
+      <hr>
+    </div>    
+</div>
+
+<div>
+  <h2>Popular (Themeforest)</h2> 
+    <div>
+      <h3>Popular authors last months</h3>
+    </div>
+    <div ng-repeat="author in popular.authors_last_month | limitTo:5">
+      <span><a href="{{author.url}}"><img ng-src="{{author.image}}" alt="{{author.item}}"></a></span>
+      <span><a href="{{author.url}}">{{author.item}}</a></span> - 
+      <span>{{author.sales}} sales</span>
+      <hr>
+    </div> 
+    <hr>
+    <div>
+      <h3>Popular items last 3 months</h3>
+    </div>
+    <div ng-repeat="item in popular.items_last_three_months | limitTo:5">
+      <span><a href="{{item.url}}"><img ng-src="{{item.live_preview_url}}" alt="{{item.item}}"></a></span>
+      <p>ID : {{item.id}}</p>
+      <p>Name : {{item.item}}</p>
+      <p>Last update : {{item.last_update}}</p>
+      <p>User : {{item.user}}</p>
+      <p>Category : {{item.category}}</p>
+      <p>Cost : {{item.cost}}</p>
+      <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+      <p>Rating : {{item.rating}}</p>
+      <p>Sales : {{item.sales}}</p>
+      <p>Tags : {{item.tags}}</p>
+      <hr>
+    </div> 
+    <hr>  
+    <div>
+      <h3>Popular items last week</h3>
+    </div>
+    <div ng-repeat="item in popular.items_last_week | limitTo:5">
+      <span><a href="{{item.url}}"><img ng-src="{{item.live_preview_url}}" alt="{{item.item}}"></a></span>
+      <p>ID : {{item.id}}</p>
+      <p>Name : {{item.item}}</p>
+      <p>Last update : {{item.last_update}}</p>
+      <p>User : {{item.user}}</p>
+      <p>Category : {{item.category}}</p>
+      <p>Cost : {{item.cost}}</p>
+      <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+      <p>Rating : {{item.rating}}</p>
+      <p>Sales : {{item.sales}}</p>
+      <p>Tags : {{item.tags}}</p>
+      <hr>
+    </div> 
+</div>
+<hr> 
+<div>
+  <h3>Item (id: 2833226)</h3>
+  <span><a href="{{item.url}}"><img ng-src="{{item.thumbnail}}" alt="{{item.item}}"></a></span>
+  <p>ID : {{item.id}}</p>
+  <p>Name : {{item.item}}</p>
+  <p>Last update : {{item.last_update}}</p>
+  <p>User : {{item.user}}</p>
+  <p>Category : {{item.category}}</p>
+  <p>Cost : {{item.cost}}</p>
+  <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+  <p>Rating : {{item.rating}}</p>
+  <p>Sales : {{item.sales}}</p>
+  <p>Tags : {{item.tags}}</p>
+  <hr>
+</div> 
+
+<div>
+  <h3>Collection (id: 4103828)</h3>
+  <div ng-repeat="item in collection | limitTo:5">
+    <span><a href="{{item.url}}"><img ng-src="{{item.thumbnail}}" alt="{{item.item}}"></a></span>
+    <p>ID : {{item.id}}</p>
+    <p>Name : {{item.item}}</p>
+    <p>User : {{item.user}}</p>      
+    <p>Cost : {{item.cost}}</p>
+    <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+    <p>Rating : {{item.rating}}</p>
+    <p>Sales : {{item.sales}}</p>      
+    <hr>
+  </div> 
+  <hr>  
+</div>
+ 
+<div>
+  <h3>Features (Themeforest)</h3>
+  <div>
+    <h4>Featured file</h4>
+    <span><a href="{{item.url}}"><img ng-src="{{features.featured_file.thumbnail}}" alt="{{features.featured_file.item}}"></a></span>
+    <p>ID : {{features.featured_file.id}}</p>
+    <p>Last update : {{features.featured_file.last_update}}</p>
+    <p>Name : {{features.featured_file.item}}</p>
+    <p>Category : {{features.featured_file.category}}</p>
+    <p>User : {{features.featured_file.user}}</p>      
+    <p>Cost : {{features.featured_file.cost}}</p>
+    <p><a href="{{features.featured_file.url}}" title="{{features.featured_file.item}}">Live preview</a></p>
+    <p>Rating : {{features.featured_file.rating}}</p>
+    <p>Sales : {{features.featured_file.sales}}</p>   
+    <p>Tags : {{features.featured_file.tags}}</p>   
+    <hr>
+  </div> 
+  <hr>
+  <div>
+    <h4>Featured author</h4>
+    <p>ID : {{features.featured_author.id}}</p>    
+    <p>Name : <a href="{{features.featured_author.url}}">{{features.featured_author.user}}</a></p>    
+    <hr>
+  </div> 
+  <hr>  
+  <div>
+    <h4>Free file</h4>
+    <span><a href="{{features.free_file.url}}"><img ng-src="{{features.free_file.thumbnail}}" alt="{{features.free_file.item}}"></a></span>
+    <p>ID : {{features.free_file.id}}</p>
+    <p>Name : {{features.free_file.item}}</p>
+    <p>Last update : {{features.free_file.last_update}}</p>
+    <p>User : {{features.free_file.user}}</p>
+    <p>Category : {{features.free_file.category}}</p>
+    <p>Cost : {{features.free_file.cost}}</p>
+    <p><a href="{{features.free_file.url}}" title="{{features.free_file.features.free_file}}">Live preview</a></p>
+    <p>Rating : {{features.free_file.rating}}</p>
+    <p>Sales : {{features.free_file.sales}}</p>
+    <p>Tags : {{features.free_file.tags}}</p>
+    <hr>
+  </div> 
+</div>
+
+<div>
+  <h3>New files (themeforest,site-templates)</h3>
+  <div ng-repeat="item in newFiles | limitTo:5">
+    <span><a href="{{item.url}}"><img ng-src="{{item.thumbnail}}" alt="{{item.item}}"></a></span>
+    <p>ID : {{item.id}}</p>
+    <p>Name : {{item.item}}</p>
+    <p>User : {{item.user}}</p>      
+    <p>Cost : {{item.cost}}</p>
+    <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+    <p>Rating : {{item.rating}}</p>
+    <p>Sales : {{item.sales}}</p>      
+    <hr>
+  </div> 
+  <hr>  
+</div>
+
+<div>
+  <h3>New files from user (collis,themeforest)</h3>
+  <div ng-repeat="item in newFilesFromUser | limitTo:5">
+    <span><a href="{{item.url}}"><img ng-src="{{item.live_preview_url}}" alt="{{item.item}}"></a></span>
+    <p>ID : {{item.id}}</p>
+    <p>Name : {{item.item}}</p>
+    <p>Last update : {{item.last_update}}</p>
+    <p>Category : {{item.category}}</p>
+    <p>User : {{item.user}}</p>      
+    <p>Cost : {{item.cost}}</p>
+    <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+    <p>Rating : {{item.rating}}</p>
+    <p>Sales : {{item.sales}}</p>      
+    <hr>
+  </div> 
+  <hr>  
+</div>
+
+<div>
+  <h3>Random new files (themeforest)</h3>
+  <div ng-repeat="item in randomNewFiles | limitTo:5">
+    <span><a href="{{item.url}}"><img ng-src="{{item.thumbnail}}" alt="{{item.item}}"></a></span>
+    <p>ID : {{item.id}}</p>
+    <p>Name : {{item.item}}</p>
+    <p>Last update : {{item.last_update}}</p>
+    <p>Category : {{item.category}}</p>
+    <p>User : {{item.user}}</p>      
+    <p>Cost : {{item.cost}}</p>
+    <p><a href="{{item.url}}" title="{{item.item}}">Live preview</a></p>
+    <p>Rating : {{item.rating}}</p>
+    <p>Sales : {{item.sales}}</p>      
+    <hr>
+  </div> 
+  <hr>  
+</div>
