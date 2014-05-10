@@ -7,7 +7,7 @@ An AngularJS wrapper to easily access the the data from the Envato's Marketplace
 
 ## Dependency
 
-[Angular-cache](https://github.com/jmdobry/angular-cache) is used to avoid unnecessary API calls.
+[Angular-cache v2](https://github.com/jmdobry/angular-cache) is used to avoid unnecessary API calls.
 
 
 ## How to use
