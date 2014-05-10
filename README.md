@@ -9,6 +9,7 @@ An AngularJS wrapper to easily access the the data from the Envato's Marketplace
 
 [Angular-cache](https://github.com/jmdobry/angular-cache) is used to avoid unnecessary API calls.
 
+
 ## How to use
 
 Copy the __marketplaces__ service and import it in your __controller__
