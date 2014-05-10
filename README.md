@@ -20,9 +20,9 @@ myApp.controller('mainCtrl', ['marketplaces', '$scope', function (marketplaces, 
     set:"activeThreads",
     param:"themeforest",
     ttl:180
-    }).
-    then(function (data){
-      $scope.threads = data["active-threads"];
+  }).
+  then(function (data){
+    $scope.threads = data["active-threads"];
   });
 }]);
 ```
