@@ -1,7 +1,7 @@
 AngularJS Envato API Wrapper
 ================
 
-An AngularJS wrapper to easily access the the data from the Envato's Marketplaces using their API. 
+An AngularJS wrapper to easily access the data from the Envato's Marketplaces using their API. 
 
 [LIVE DEMO] (http://winstef.github.io/AngularJS-Envato-API-Wrapper)
 
